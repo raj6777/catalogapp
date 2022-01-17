@@ -1,12 +1,15 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/utils/routes.dart';
-
+import 'package:velocity_x/velocity_x.dart';
+import 'package:flutter/material.dart';
 class loginpage extends StatefulWidget {
   @override
   _loginpageState createState() => _loginpageState();
 }
 
 class _loginpageState extends State<loginpage> {
+  @override
+
   String name = "";
   bool changeButton = false;
 
@@ -28,7 +31,7 @@ class _loginpageState extends State<loginpage> {
 
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -88,7 +91,7 @@ class _loginpageState extends State<loginpage> {
                       height: 40,
                     ),
                     Material(
-                      color: Colors.deepPurple,
+                      color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
